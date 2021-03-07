@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Soul.data</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .light {
+            background: #666;
+            color: #fff;
+        }
+
+        .content .tagcloud {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        ul {
+            display: inline-block;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- custom style -->
+    <style>
+        .tagcloud {
+            font-size: 22px;
+        }
+
+        .tagcloud--item {
+            padding: 2px 4px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .tagcloud--item:hover {
+            background-color: rgba(0, 0, 0, .1);
+            border: 1px solid #333;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            opacity: 1 !important;
+            z-index: 100 !important;
+        }
+
+        .light .tagcloud--item {
+            color: #fff;
+        }
+
+        .light .tagcloud--item:hover {
+            background-color: rgba(255, 255, 255, .1);
+            border: 1px solid #fff;
+        }
+    </style>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <h1>Souldatov</h1>
+    <div class="content"> </div>
+
+    <div class="results"> 
+        <div class="Ambient Trip Hop Electronica"> 
+            <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsouldatov%2Fendless-story%2F" frameborder="0" ></iframe>
+        </div>
+        <div class="House Electronica "> 
+            <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fradioplato%2Fsouldatov-happy-new-year-2021%2F" frameborder="0" ></iframe>
+        </div>
+        <div class="World Electronica House"> 
+           <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsouldatov%2Fsouldatov-radio-plato-saturday-special20%2F" frameborder="0" ></iframe>
+        </div>
+        <div class="Soviet World Tropical"> 
+           <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fradioplato%2Fsouldatov-radio-plato-34mag-ny-2019-music-marathon%2F" frameborder="0" ></iframe>
+        </div>
+        <div class="Dub Reggae"> 
+           <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsouldatov%2Fking-of-all-kings%2F" frameborder="0" ></iframe>
+        </div>
+        <div class="Beats Dub"> 
+           <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsouldatov%2Fsouldatov-kult%C5%ABros-naktis-tiltas-po-tiltu%2F" frameborder="0" ></iframe>
+        </div>
+        <div class="Cumbia Dub Tropical"> 
+           <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fneringafm%2Fneringa-fm-beachball-fest16-promo-mix-3-souldatov%2F" frameborder="0" ></iframe>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./TagCloud.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <script>
+        var myTags = [
+            'African', 'Ambient', 'Beats', 'Breaks', 'Cumbia', 'Deep', 'Disco', 'Downtempo', 'Dub', 'Electronica',
+            'Experimental', 'Funk', 'Jazz', 'Hip Hop', 'House', 'Leftfield', 'Reggae',
+            'Soul', 'Soviet', 'Trip Hop',
+            'Tropical', 'World'
+        ];
+
+
+
+        var tagCloud = TagCloud('.content', myTags,{
+
+        // radius in px
+        radius: 250,
+
+        // animation speed
+        // slow, normal, fast
+        maxSpeed: 'normal',
+        initSpeed: 'normal',
+
+        // 0 = top
+        // 90 = left
+        // 135 = right-bottom
+        direction: 135,
+    
+        // interact with cursor move on mouse out
+        keep: true
+    
+        });
+
+        console.log(tagCloud);
+    </script>
+</body>
+
+</html>
