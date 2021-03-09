@@ -1,9 +1,13 @@
- $(document).ready(function() { 
+$(function() {
+        $('.lazy').lazy();
+    });
+
+$(document).ready(function() { 
 	$(".tagcloud--item").click(function(e) {	  
 	  chosenTag = this.innerHTML; 
-	  
-	  $(".results").children().each(function( index ) {
+	  $("#results").children().each(function( index ) {
 		debugger;
+
 		if (this.classList.contains(chosenTag)) {
 			$(this).show();
 		} else {
@@ -12,4 +16,3 @@
 	  });
 	});
  });
-
