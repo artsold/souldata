@@ -23,6 +23,10 @@
             height: 100vh;
         }
 
+        .hidden {
+            dispaly: none;
+        }
+
         .light {
             background: #666;
             color: #fff;
@@ -49,6 +53,13 @@
         iframe {
             width: 100%; height: 120;
         }
+
+        .lazy {
+            width: 700px; 
+            height: 467px; 
+            display: block;
+        }
+
     </style>
     <!-- custom style -->
     <style>
@@ -90,8 +101,8 @@
     <!-- <h1>Souldatov</h1> -->
     <div class="content"> </div>
 
-    <div class="results"> 
-                <div class="Ambient Downtempo Trip-Hop Leftfield Dub"> 
+    <div id="results" class="lazy"> 
+        <div class="Ambient Downtempo Trip-Hop Leftfield Dub"> 
             <iframe src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsouldatov%2Fendless-story%2F" frameborder="0" ></iframe>
         </div>
         <div class="House Disco Downtempo Techno Leftfield"> 
@@ -211,6 +222,12 @@
 
         console.log(tagCloud);
     </script>
+
+
+    <!-- cdnjs -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.js"></script>
+                
+
 </body>
 
 </html>
